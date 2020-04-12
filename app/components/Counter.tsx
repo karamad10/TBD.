@@ -8,6 +8,8 @@ type Props = {
   incrementIfOdd: () => void;
   incrementAsync: () => void;
   decrement: () => void;
+  multiplay: () => void;
+  reset: () => void;
   counter: number;
 };
 
@@ -17,7 +19,9 @@ export default function Counter(props: Props) {
     incrementIfOdd,
     incrementAsync,
     decrement,
-    counter
+    multiplay,
+    counter,
+    reset
   } = props;
 
   return (
@@ -46,6 +50,22 @@ export default function Counter(props: Props) {
           type="button"
         >
           <i className="fa fa-minus" />
+        </button>
+        <button
+          className={styles.btn}
+          onClick={multiplay}
+          data-tclass="btn"
+          type="button"
+        >
+          <i className="fa fa-times" />
+        </button>
+        <button
+          className={styles.btn}
+          onClick={reset}
+          data-tclass="btn"
+          type="button"
+        >
+          <i className="fa fa-refresh" />
         </button>
         <button
           className={styles.btn}

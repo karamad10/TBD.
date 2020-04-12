@@ -4,6 +4,8 @@ import Counter from '../components/Counter';
 import {
   increment,
   decrement,
+  multiplay,
+  reset,
   incrementIfOdd,
   incrementAsync
 } from '../actions/counter';
@@ -20,6 +22,8 @@ function mapDispatchToProps(dispatch: Dispatch) {
     {
       increment,
       decrement,
+      multiplay,
+      reset,
       incrementIfOdd,
       incrementAsync
     },
